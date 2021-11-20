@@ -1,7 +1,6 @@
-package day02;
+package day02.perfectnumbers;
 
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class PerfectNumbersTest {
