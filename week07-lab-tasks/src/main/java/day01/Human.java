@@ -10,7 +10,6 @@ public class Human {
         if (isNameValid(name) && isYearOfBirthValid(yearOfBirth)){
             this.name = name;
             this.yearOfBirth = yearOfBirth;
-            System.out.println(getName());
         }
     }
 

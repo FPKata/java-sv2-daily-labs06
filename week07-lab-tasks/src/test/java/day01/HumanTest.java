@@ -15,16 +15,13 @@ class HumanTest {
 
     @Test
     void testIsNameValidWithNull(){
-        Human human = new Human(null, 1999);
-        assertThrows(IllegalArgumentException.class, () -> human.isNameValid(human.getName()));
-        //assertEquals("Invalid name", iae.getMessage());
+        IllegalArgumentException iae = assertThrows(IllegalArgumentException.class, () -> new Human(null, 1999));
+        assertEquals("Invalid name", iae.getMessage());
     }
 
     @Test
     void testIsNameValidWithWrongName(){
-        Human human = new Human("KisÉva", 1999);
-
-        IllegalArgumentException iae = assertThrows(IllegalArgumentException.class, () -> human.isNameValid(human.getName()));
+        IllegalArgumentException iae = assertThrows(IllegalArgumentException.class, () -> new Human("KisÉva", 1999));
         assertEquals("Invalid name", iae.getMessage());
     }
 }
