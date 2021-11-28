@@ -9,9 +9,6 @@ public class PerfectNumbers {
                 sum+=i;
             }
         }
-
         return number == sum;
-
     }
-
 }
